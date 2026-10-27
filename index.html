@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+  <title>Studio Créatif — Vidéo, Design & Branding</title>
+  <style>
+    :root{--bg:#f7f7f5;--surface:#fff;--ink:#171717;--muted:#707070;--line:#e7e7e3;--accent:#171717;--soft:#f0f0ec;--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,247,245,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,231,227,.8)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.04em;font-size:19px}.brand span{font-weight:400;color:var(--muted)}.navlinks{display:flex;gap:22px;font-size:13px;color:#555}.navlinks a:hover{color:#000}
+    .btn{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:12px 17px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font:inherit;font-size:13px;font-weight:650;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px);opacity:.88}.btn.secondary{background:transparent;color:var(--ink)}.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #777;outline-offset:2px}
+    .hero{padding:88px 0 62px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:750;color:var(--muted)}h1{font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.065em;margin:18px 0 20px;max-width:700px}.hero p{color:#666;max-width:540px;font-size:17px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.hero-card{background:#e9e9e4;border-radius:30px;min-height:360px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.hero-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#d1d1c9;right:-45px;top:30px}.hero-card:after{content:"";position:absolute;width:160px;height:220px;border:1px solid #aaa99f;border-radius:100px;right:65px;top:80px;transform:rotate(25deg)}.hero-card>*{position:relative;z-index:1}.hero-card .big{font-size:52px;line-height:1;letter-spacing:-.07em;font-weight:750;max-width:280px}.hero-card .bottom{display:flex;justify-content:space-between;gap:10px;color:#5d5d56;font-size:12px}
+    section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:25px}.section-head h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.055em;line-height:1.1;margin:8px 0 0}.section-head p{color:var(--muted);max-width:420px;margin:0;font-size:14px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service,.package,.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.service .num{font-size:12px;color:var(--muted)}.service h3{font-size:21px;letter-spacing:-.035em;margin:25px 0 8px}.service p{color:var(--muted);font-size:14px;min-height:44px}.price{font-size:25px;font-weight:750;letter-spacing:-.04em}.small{font-size:12px;color:var(--muted)}.service .small{display:block;margin-top:6px}
+    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.package{display:flex;flex-direction:column;min-height:310px}.package.featured{border-color:#202020;box-shadow:0 8px 30px rgba(0,0,0,.04)}.pack-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.pill{font-size:10px;border-radius:999px;padding:5px 9px;background:var(--soft);font-weight:700}.package h3{margin:20px 0 4px;font-size:22px;letter-spacing:-.04em}.package ul{padding-left:18px;color:#5e5e5e;font-size:13px;flex:1}.package li{margin:7px 0}.package .btn{width:100%;margin-top:15px}
+    .calculator{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start}.panel h3{margin:0 0 6px;font-size:22px;letter-spacing:-.04em}.panel>p{color:var(--muted);font-size:13px;margin:0 0 22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:700;color:#444}input,select,textarea{width:100%;border:1px solid #deded9;background:#fff;border-radius:12px;padding:12px 13px;color:var(--ink);font:inherit;font-size:14px}textarea{min-height:90px;resize:vertical}.checkrow{display:flex;align-items:center;gap:9px;font-size:13px;color:#444;margin:12px 0}.checkrow input{width:16px;height:16px;accent-color:#171717}.summary{position:sticky;top:92px;background:#191919;color:white;border-radius:var(--radius);padding:25px}.summary .muted{color:#aaa}.summary h3{font-size:20px;margin:0 0 20px}.sumline{display:flex;justify-content:space-between;gap:15px;margin:12px 0;font-size:13px}.sumline span:first-child{color:#c3c3c3}.sumline strong{font-weight:650;text-align:right}.sumtotal{border-top:1px solid #414141;padding-top:17px;margin-top:18px;display:flex;justify-content:space-between;align-items:end;gap:12px}.sumtotal strong{font-size:30px;letter-spacing:-.05em}.summary .btn{background:#fff;color:#111;border-color:#fff;width:100%;margin-top:20px}.summary .note{font-size:11px;color:#aaa;margin:12px 0 0}.extras{border-top:1px solid var(--line);margin-top:20px;padding-top:15px}.extras h4{font-size:13px;margin:0 0 8px}.extras .small{line-height:1.7}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}.faq article{border-top:1px solid var(--line);padding:18px 0}.faq h3{font-size:15px;margin:0 0 7px}.faq p{font-size:13px;color:var(--muted);margin:0}.contact{background:#e9e9e4;border-radius:28px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:20px}.contact h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.055em;line-height:1.1;margin:8px 0}.contact p{color:#666;margin:0}.contact .btn{white-space:nowrap}
+    footer{padding:30px 0 42px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:55px;gap:25px}.hero-card{min-height:270px}.grid3,.packages{grid-template-columns:1fr}.service p{min-height:0}.calculator{grid-template-columns:1fr}.summary{position:static}.section-head{align-items:start;flex-direction:column}.contact{align-items:start;flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.package{min-height:0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">AKRAM<span> DSN </span></a>
+    <nav class="navlinks"><a href="#services">Services</a><a href="#packs">Packs</a><a href="#devis">Devis en ligne</a><a href="#contact">Contact</a></nav>
+    <a class="btn secondary" href="#devis">Obtenir un devis ↗</a>
+  </div>
+</header>
+
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Vidéo · Design · Identité visuelle</div>
+      <h1>Des idées fortes.<br>Une image qui marque.</h1>
+      <p>Création de contenu visuel pour les marques, commerces et créateurs. Une approche soignée, des prix clairs et des solutions adaptées à votre projet.</p>
+      <div class="hero-actions"><a class="btn" href="#devis">Configurer mon projet ↗</a><a class="btn secondary" href="#services">Découvrir les services</a></div>
+    </div>
+    <div class="hero-card">
+      <div class="eyebrow">Votre image, notre terrain de jeu</div>
+      <div class="big">Create.<br>Capture.<br>Connect.</div>
+      <div class="bottom"><span>CASABLANCA · MAROC</span><span>DESIGN & CONTENT STUDIO</span></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Ce que nous faisons</div><h2>Des services pensés<br>pour votre marque.</h2></div><p>Choisissez une prestation à l’unité ou composez votre propre formule grâce au configurateur.</p></div>
+      <div class="grid3">
+        <article class="service"><div class="num">01 / VIDÉO</div><h3>Production vidéo</h3><p>Reels, vidéos de produits, contenus pour commerces et marques.</p><div class="price">Dès 500 DH</div><span class="small">Tournage + montage</span></article>
+        <article class="service"><div class="num">02 / DESIGN</div><h3>Social media design</h3><p>Posts, carrousels et stories cohérents avec votre identité.</p><div class="price">Dès 60 DH</div><span class="small">Selon le format</span></article>
+        <article class="service"><div class="num">03 / BRANDING</div><h3>Identité visuelle</h3><p>Logo, univers graphique et supports pour présenter votre marque.</p><div class="price">Dès 1 500 DH</div><span class="small">Selon le niveau de livraison</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packs">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Offres recommandées</div><h2>Choisissez votre pack.</h2></div><p>Des formules faciles à comprendre pour démarrer ou publier régulièrement.</p></div>
+      <div class="packages">
+        <article class="package"><div class="pack-top"><span class="eyebrow">01 / STARTER</span></div><h3>Starter</h3><div class="price">1 200 DH</div><ul><li>2 Reels Starter</li><li>2 posts design</li><li>1 courte session de tournage</li><li>1 série de corrections par contenu</li></ul><button class="btn secondary choose-pack" data-pack="starter">Choisir Starter</button></article>
+        <article class="package featured"><div class="pack-top"><span class="eyebrow">02 / GROWTH</span><span class="pill">POPULAIRE</span></div><h3>Growth</h3><div class="price">2 800 DH</div><ul><li>4 Reels Pro</li><li>4 posts design</li><li>4 stories</li><li>Session de tournage organisée</li><li>1 série de corrections par contenu</li></ul><button class="btn choose-pack" data-pack="growth">Choisir Growth</button></article>
+        <article class="package"><div class="pack-top"><span class="eyebrow">03 / PREMIUM</span></div><h3>Premium</h3><div class="price">4 800 DH</div><ul><li>6 Reels Pro</li><li>8 posts design</li><li>8 stories</li><li>Planification des contenus du mois</li><li>1 série de corrections par contenu</li></ul><button class="btn secondary choose-pack" data-pack="premium">Choisir Premium</button></article>
+      </div>
+      <p class="small" style="margin-top:14px">Les packs sont des estimations de départ. Déplacements hors zone, modèles, lieux payants, publication et gestion de compte ne sont pas inclus sauf mention contraire dans le devis.</p>
+    </div>
+  </section>
+
+  <section id="devis">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Configurateur de projet</div><h2>Construisons votre devis.</h2></div><p>Sélectionnez vos besoins : le montant estimé se met à jour automatiquement.</p></div>
+      <div class="calculator">
+        <div class="panel">
+          <h3>Votre projet</h3><p>Les prix sont en dirhams marocains (DH).</p>
+          <div class="form-grid">
+            <div class="field"><label for="clientName">Nom complet *</label><input id="clientName" placeholder="Votre nom" autocomplete="name"></div>
+            <div class="field"><label for="company">Entreprise / marque</label><input id="company" placeholder="Nom de votre marque"></div>
+            <div class="field"><label for="contact">WhatsApp ou téléphone *</label><input id="contact" placeholder="06 XX XX XX XX" autocomplete="tel"></div>
+            <div class="field"><label for="sector">Votre activité</label><select id="sector"><option>Commerce / boutique</option><option>Restaurant / café</option><option>Beauté / mode</option><option>Immobilier</option><option>Créateur de contenu</option><option>Entreprise / agence</option><option>Autre</option></select></div>
+            <div class="field full"><label for="package">Pack de contenu</label><select id="package"><option value="custom">Je compose mon projet</option><option value="starter">Pack Starter — 1 200 DH</option><option value="growth">Pack Growth — 2 800 DH</option><option value="premium">Pack Premium — 4 800 DH</option></select></div>
+            <div class="field"><label for="videoType">Prestation vidéo</label><select id="videoType"><option value="shootPro">Tournage + montage Pro (700 DH)</option><option value="shootStarter">Tournage + montage Starter (500 DH)</option><option value="shootPremium">Tournage + montage Premium (900 DH)</option><option value="editBasic">Montage seul Basic (250 DH)</option><option value="editPro">Montage seul Pro (350 DH)</option><option value="editComplex">Montage seul complexe (500 DH)</option><option value="none">Aucune vidéo</option></select></div>
+            <div class="field"><label for="reels">Nombre de vidéos / Reels</label><input id="reels" type="number" min="0" max="100" value="1"></div>
+            <div class="field"><label for="posts">Nombre de posts</label><input id="posts" type="number" min="0" max="100" value="0"></div>
+            <div class="field"><label for="stories">Nombre de stories</label><input id="stories" type="number" min="0" max="100" value="0"></div>
+            <div class="field full"><label for="branding">Branding / identité visuelle</label><select id="branding"><option value="0">Aucun</option><option value="1500">Logo Starter — 1 500 DH</option><option value="3500">Brand Identity — 3 500 DH</option><option value="5500">Branding Premium — 5 500 DH</option></select></div>
+            <div class="field full"><label for="details">Parlez-nous de votre projet</label><textarea id="details" placeholder="Objectif, style souhaité, date, lieu de tournage..."></textarea></div>
+          </div>
+          <label class="checkrow"><input type="checkbox" id="express"> Livraison express (+30 %)</label>
+          <div class="extras"><h4>Tarifs de référence</h4><div class="small">Post : 120 DH · Story : 60 DH · Carousel jusqu’à 5 pages : 250 DH<br>Les frais de déplacement et les demandes particulières sont confirmés dans le devis.</div></div>
+        </div>
+        <aside class="summary">
+          <div class="muted eyebrow">Récapitulatif</div><h3>Votre estimation</h3>
+          <div class="sumline"><span>Pack sélectionné</span><strong id="sumPack">Projet personnalisé</strong></div>
+          <div class="sumline"><span>Vidéo / montage</span><strong id="sumVideo">500 DH</strong></div>
+          <div class="sumline"><span>Posts & stories</span><strong id="sumDesign">0 DH</strong></div>
+          <div class="sumline"><span>Branding</span><strong id="sumBrand">0 DH</strong></div>
+          <div class="sumline"><span>Express</span><strong id="sumExpress">0 DH</strong></div>
+          <div class="sumtotal"><div><div class="muted" style="font-size:12px">Total estimatif</div><strong id="sumTotal">500 DH</strong></div><span class="muted" style="font-size:11px">MAD / DH</span></div>
+          <button class="btn" id="sendQuote">Envoyer la demande sur WhatsApp ↗</button>
+          <p class="note">Ceci est une estimation non contractuelle. Le devis final sera confirmé après discussion. Aucun paiement n’est effectué sur ce site.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Questions fréquentes</div><h2>Avant de commencer.</h2></div></div>
+      <div class="faq">
+        <article><h3>Le tournage est-il inclus ?</h3><p>Oui pour les offres « tournage + montage ». Le lieu, la durée de la session et les déplacements sont à confirmer avant validation.</p></article>
+        <article><h3>Combien de corrections sont incluses ?</h3><p>Une série de corrections raisonnables est prévue par contenu. Les changements importants ou les nouvelles versions peuvent être facturés en supplément.</p></article>
+        <article><h3>Est-ce que vous gérez les réseaux sociaux ?</h3><p>Le contenu créatif est disponible dans les packs indiqués. La publication, la modération et les campagnes publicitaires doivent être ajoutées au devis si nécessaire.</p></article>
+        <article><h3>Le prix affiché est-il définitif ?</h3><p>Non. C’est une estimation basée sur vos choix. Le prix final dépend du brief, de la logistique et des livrables confirmés.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact"><div><div class="eyebrow">Un projet en tête ?</div><h2>Parlons de votre prochaine idée.</h2><p>Expliquez-nous votre besoin et recevrez une proposition adaptée.</p></div><a class="btn" href="#devis">Créer mon devis ↗</a></div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Studio Créatif. Tous droits réservés.</span><span>Vidéo · Design · Branding — Casablanca, Maroc</span></div></footer>
+
+<script>
+  // IMPORTANT : remplacez ce numéro par votre numéro WhatsApp au format international,
+  // sans "+" ni espaces. Exemple Maroc : 2126XXXXXXXX
+  const WHATSAPP_NUMBER = "212679747035";
+
+  const el = id => document.getElementById(id);
+  const money = n => Math.round(n).toLocaleString("fr-FR") + " DH";
+  const priceByVideo = {shootStarter:500, shootPro:700, shootPremium:900, editBasic:250, editPro:350, editComplex:500, none:0};
+  const packData = {
+    starter:{name:"Starter",price:1200,videoType:"shootStarter",reels:2,posts:2,stories:0,branding:0},
+    growth:{name:"Growth",price:2800,videoType:"shootPro",reels:4,posts:4,stories:4,branding:0},
+    premium:{name:"Premium",price:4800,videoType:"shootPro",reels:6,posts:8,stories:8,branding:0}
+  };
+  let activePack = "custom";
+
+  function safeCount(id) {
+    const n = Number.parseInt(el(id).value, 10);
+    return Number.isFinite(n) ? Math.max(0, Math.min(100, n)) : 0;
+  }
+
+  function calculate() {
+    const packKey = el("package").value;
+    activePack = packKey;
+    let subtotal = 0, videoCost = 0, designCost = 0, brandCost = 0, packName = "Projet personnalisé";
+    if (packKey !== "custom" && packData[packKey]) {
+      const p = packData[packKey];
+      packName = "Pack " + p.name;
+      subtotal = p.price;
+      videoCost = p.reels * priceByVideo[p.videoType];
+      designCost = p.posts * 120 + p.stories * 60;
+      // Pack total is used as a fixed bundle price, not added on top of individual items.
+      el("sumVideo").textContent = money(videoCost);
+      el("sumDesign").textContent = money(designCost);
+      el("sumBrand").textContent = money(0);
+      el("sumPack").textContent = packName + " inclus";
+    } else {
+      const videoType = el("videoType").value;
+      const reels = safeCount("reels");
+      const posts = safeCount("posts");
+      const stories = safeCount("stories");
+      videoCost = priceByVideo[videoType] * reels;
+      designCost = posts * 120 + stories * 60;
+      brandCost = Number(el("branding").value) || 0;
+      subtotal = videoCost + designCost + brandCost;
+      el("sumVideo").textContent = money(videoCost);
+      el("sumDesign").textContent = money(designCost);
+      el("sumBrand").textContent = money(brandCost);
+      el("sumPack").textContent = packName;
+    }
+    const expressCost = el("express").checked ? subtotal * 0.30 : 0;
+    const total = subtotal + expressCost;
+    el("sumExpress").textContent = money(expressCost);
+    el("sumTotal").textContent = money(total);
+    return {packKey, packName, subtotal, videoCost, designCost, brandCost, expressCost, total};
+  }
+
+  function applyPack(key) {
+    if (!packData[key]) return;
+    el("package").value = key;
+    const p = packData[key];
+    el("videoType").value = p.videoType;
+    el("reels").value = p.reels;
+    el("posts").value = p.posts;
+    el("stories").value = p.stories;
+    el("branding").value = "0";
+    calculate();
+    el("devis").scrollIntoView({behavior:"smooth"});
+  }
+
+  ["package","videoType","reels","posts","stories","branding","express"].forEach(id => {
+    el(id).addEventListener("input", () => {
+      if (["videoType","reels","posts","stories","branding"].includes(id) && el("package").value !== "custom") {
+        el("package").value = "custom";
+      }
+      calculate();
+    });
+    el(id).addEventListener("change", calculate);
+  });
+  document.querySelectorAll(".choose-pack").forEach(button => button.addEventListener("click", () => applyPack(button.dataset.pack)));
+
+  el("sendQuote").addEventListener("click", () => {
+    const result = calculate();
+    const name = el("clientName").value.trim();
+    const phone = el("contact").value.trim();
+    if (!name || !phone) {
+      alert("Merci d’indiquer votre nom et votre numéro de téléphone avant d’envoyer la demande.");
+      (!name ? el("clientName") : el("contact")).focus();
+      return;
+    }
+    if (WHATSAPP_NUMBER === "REMPLACE_PAR_TON_NUMERO" || !WHATSAPP_NUMBER) {
+      alert("Configurez d’abord WHATSAPP_NUMBER dans le code avec votre numéro au format 2126XXXXXXXX.");
+      return;
+    }
+    const lines = [
+      "Bonjour, je souhaite demander un devis.",
+      "",
+      "Nom : " + name,
+      "Entreprise : " + (el("company").value.trim() || "Non précisée"),
+      "Téléphone : " + phone,
+      "Activité : " + el("sector").value,
+      "Formule : " + result.packName,
+      "Prestation vidéo : " + el("videoType").selectedOptions[0].text,
+      "Nombre de Reels : " + safeCount("reels"),
+      "Posts : " + safeCount("posts"),
+      "Stories : " + safeCount("stories"),
+      "Branding : " + el("branding").selectedOptions[0].text,
+      "Livraison express : " + (el("express").checked ? "Oui" : "Non"),
+      "Total estimatif : " + money(result.total),
+      "Détails : " + (el("details").value.trim() || "Aucun détail ajouté"),
+      "",
+      "Je comprends que le montant est estimatif et que le devis final doit être confirmé."
+    ];
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+  el("year").textContent = new Date().getFullYear();
+  calculate();
+</script>
+</body>
+</html>
